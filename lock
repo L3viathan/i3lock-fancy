@@ -77,7 +77,8 @@ do
     fi
 done <<<"$(xrandr)"
 
-convert "$IMAGE" "${HUE[@]}" "${EFFECT[@]}" "${LOCK[@]}" "$IMAGE"
+# convert "$IMAGE" "${HUE[@]}" "${EFFECT[@]}" "${LOCK[@]}" "$IMAGE"
+convert "$IMAGE" "${LOCK[@]}" "$IMAGE"
 
 # try to use a forked version of i3lock with prepared parameters
 if ! i3lock -n "${PARAM[@]}" -i "$IMAGE" > /dev/null 2>&1; then
